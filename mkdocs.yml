@@ -1,0 +1,41 @@
+site_name: Aki's mods Wiki
+theme:
+  name: material
+  favicon: img/favicon.ico
+  custom_dir: overrides
+  palette:
+    scheme: default
+    primary: pink
+  features:
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.instant
+    - navigation.top
+    - navigation.expand
+plugins:
+  - search
+extra_css:
+  - stylesheets/extra.css
+  - https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascript/recipes.js
+  - javascript/jquery-3.6.0.min.js
+  - https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js
+  - javascript/datatable.js

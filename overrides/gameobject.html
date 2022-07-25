@@ -1,0 +1,51 @@
+{% extends "base.html" %} {%- block content %}
+
+<div class="info_card v-align-text-top">
+    <table>
+        <tr>
+            <th class="info_card_header" colspan="2">{{ page.title }}</th>
+        </tr>
+        <tr>
+            <td colspan="2" class="info_card_image"><img src="{{site_url}}/img/{{ page.meta.image }}.png" /> <br></td>
+        </tr>
+        {% if page.meta.element %}
+        <tr>
+            <td>Primary Element</td>
+            <td>{{ page.meta.element }}</td>
+        </tr>
+        {% endif %} {% if page.meta.kcal %}
+        <tr>
+            <td>Kcal per 1 Kg</td>
+            <td>{{ page.meta.kcal }}</td>
+        </tr>
+        {% endif %} {% if page.meta.quality %}
+        <tr>
+            <td>Quality</td>
+            <td>{{ page.meta.quality }}</td>
+        </tr>
+        {% endif %} {% if page.meta.spoiltime %}
+        <tr>
+            <td>Spoil Time</td>
+            <td>{{ page.meta.spoiltime }}</td>
+        </tr>
+        {% endif %} {% if page.meta.source %}
+        <tr>
+            <td>Source</td>
+            <td>{{ page.meta.source }}</td>
+        </tr>
+        {% endif %} {% if page.meta.type %}
+        <tr>
+            <td>Type</td>
+            <td>{{ page.meta.type }}</td>
+        </tr>
+        {% endif %}
+    </table>
+</div>
+
+<h1>{{ page.title }}</h1>
+
+{% if page.meta.dlc %}
+<p>
+    <img src="{{site_url}}/img/spaced_out_banner.png" alt="Spaced Out Content" /> This content is only available in Spaced Out!
+</p>
+{% endif %} {{ page.content }} {%- endblock %}

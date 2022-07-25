@@ -1,0 +1,9 @@
+{% extends "base.html" %} {%- block content %}
+
+<h1>{{ page.title }}</h1>
+
+{% if page.meta.dlc %}
+<p>
+    <img src="{{site_url}}/img/spaced_out_banner.png" alt="Spaced Out Content" /> This content is only available in Spaced Out!
+</p>
+{% endif %} {{ page.content }} {%- endblock %}

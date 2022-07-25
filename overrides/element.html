@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{%- block content %}
+
+<h1>{{ page.title }}</h1>
+
+{% if page.meta.dlc %}
+<p>
+  <img src="{{site_url}}/img/spaced_out_banner.png" alt="Spaced Out Content"/>
+  This content is only available in Spaced Out!
+</p>
+{% endif %}
+
+<div class="info_card v-align-text-top">
+    <table>
+      <tr>
+          <th class="info_card_header" colspan="2">Bitumen</th>
+      </tr>
+      <tr>
+          <td colspan="2" class="info_card_image"><img src="{{site_url}}/img/{{ page.meta.image }}.png" /> <br></td>
+      </tr>
+      <tr>
+          <td>Thermal Conductivity</td>
+          <td>{{ page.meta.tc }}</td>
+      </tr>
+      <tr>
+          <td>Heat Capacity</td>
+          <td>{{ page.meta.hc }}</td>
+      </tr>
+      <tr>
+          <td>Hardness</td>
+          <td>{{ page.meta.hardness }}</td>
+      </tr>
+      <tr>
+          <td>Radiation absorption</td>
+          <td>{{ page.meta.rad }}</td>
+      </tr>
+      <tr>
+          <td>Kg/Tile</td>
+          <td>{{ page.meta.kgpertile }}</td>
+      </tr>
+      <tr>
+          <td>Light absorption</td>
+          <td>{{ page.meta.lightabsorb }}</td>
+      </tr>
+    </table>
+  </div>
+
+{{ page.content }}
+
+{%- endblock %}
